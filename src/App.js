@@ -9,6 +9,7 @@ import Expenses from './components/Expenses/Expenses'
 import Settings from './components/SettingsPage/Settings'
 import Notifications from './components/Notifications/Notifications';
 import { UsersDataContextProvider } from './components/NameProvider/NameProvider';
+import { AuthProvider } from './components/AuthContext/AuthContext';
 class App extends Component {
 
 
@@ -25,7 +26,7 @@ class App extends Component {
   render(){
   return (
     <div className="App">
-      <UsersDataContextProvider>
+      <AuthProvider>
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -36,7 +37,7 @@ class App extends Component {
           <Route path="/expenses" element={<Expenses/>} />
         </Routes>
      </Router>
-     </UsersDataContextProvider>
+     </AuthProvider>
     </div>
   );
 }
