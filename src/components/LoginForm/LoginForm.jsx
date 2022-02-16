@@ -24,8 +24,17 @@ import firebase from 'firebase/compat/app'
            history('/');
          }).catch(error=>setError(error.message));
        }
-       
-
+       const signInWithGoogle = () =>{
+         const googleProvider = new firebase.auth.GoogleAuthProvider();
+         auth.signInWithPopup(googleProvider)
+         .then(()=> {
+           window.location.assign('/')
+         })
+         .catch(error =>{
+           console.error(error);
+         })
+       }
+     
 
 
 
@@ -63,18 +72,9 @@ import firebase from 'firebase/compat/app'
               />
            <br />
            <button type="submit" className='login-form-login-button'>Zaloguj</button>
-           <button type='submit' className='login-form-google-login-button'>Google</button>
+           
            <br />
-           <button
-       onClick={()=>{
-
-      
-   const GoogleAuth = 
-   new firebase.auth.GoogleAuthProvider();
-
-  firebase.auth().signInWithPopup(GoogleAuth)
-
- }}>Zaloguj się Przez Google</button>
+           <button onClick={signInWithGoogle}>Zaloguj się Przez Google</button>
  <br/>
            <span>Nie masz konta?</span>
            <Link to="/Register">Rejestruj</Link>
