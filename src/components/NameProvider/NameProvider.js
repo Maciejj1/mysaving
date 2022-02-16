@@ -10,7 +10,7 @@ export class UsersDataContextProvider extends React.Component {
   db.collection('UsersData').onSnapshot((snapshot)=>{
     let changes = snapshot.docChanges();
     changes.forEach(change =>{
-      if(change.type == 'added'){
+      if(change.type === 'login'){
           prevUsersData.push({
               ID : change.doc.id,
               Name: change.doc.data().Name
