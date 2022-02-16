@@ -5,33 +5,33 @@ import { useAuth } from '../AuthContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { UsersDataContext } from '../NameProvider/NameProvider';
-
-const Home = () => { 
-  const { currentUser} = useAuth()
-   const history = useNavigate();
-   const handleLogOut= () =>{
-     auth.signOut().then(()=>{
-       history('/login')
-     })
-   }
+import Nav from '../NavBar/Nav';
+const Home = () => {
 
    
   return (
+   
     <div>
-
-        <h1>Udało się</h1>
+      <>
+        <Nav/>
+        </>
+        <h1>Twoje Saldo</h1>
+        <h2>1200zł</h2>
+        <h3>Saldo</h3>
+        <h2>600zł</h2>
+        <h3>Oszczednosci</h3>
+        <h2>1000zł</h2>
+        <h3>Wydatki</h3>
         <br />
        
       <>
         <div className='user-name' >
-          <h2>Email: {currentUser.email}</h2>
+          
         </div>
         </>
-        
       
-        Dodaj Saldo
-        <input type="text"/>
-        <button type="submit">Dodaj</button>
+        <br/>
+        <Link to="/">Panel Głowny</Link>
         <br/>
         <Link to="/notifications">Powiadomienia</Link>
         <br/>
@@ -42,7 +42,7 @@ const Home = () => {
         <br />
 
        <h2></h2>
-        <button onClick={handleLogOut}>Wyloguj</button>
+        
     </div>
   )
 }
