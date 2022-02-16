@@ -1,21 +1,71 @@
-import React from 'react'
-
+import React,{useState} from 'react'
+import {auth} from '../FirebaseConfig/Config'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
  const LoginForm = () => {
+       const history = useNavigate();
+       const[email , setEmail] = useState('');
+       const[password , setPassword] = useState('');
+       const[successMsg , setSuccessMsg] = useState('');
+       const[error , setError]= useState('');
+
+       const handleLogin=(e)=>{
+         e.preventDefault();
+         console.log(email,password);
+         auth.signInWithEmailAndPassword(email,password).then(()=>{
+           setSuccessMsg('Zalogowano');
+           setEmail('');
+           setPassword('');
+           setError('');
+           setSuccessMsg('');
+           history('/');
+         }).catch(error=>setError(error.message));
+       }
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className='login-form-container'>
+      {successMsg&&<>
+      <div className='succes-msg'>{successMsg}</div>
+      <br/>
+      </>}
         <h2>Logowanie</h2>
-        <form autoComplete='off' className='login-form-group'>
-           <label htmlFor='email'/>
-           <input type="email" className='login-form-email' placeholder='E-mail'/>
+        <form autoComplete='off' className='login-form-group' onSubmit={handleLogin}>
+            <label htmlFor='email'/>
+              <input 
+              type="email" 
+              className='login-form-email' 
+              placeholder='E-mail'
+              required
+              onChange={(e)=>setEmail(e.target.value)}
+              value={email}
+              />
            <br />
-           <label htmlFor='password'/>
-           <input type="password" className='login-form-password' placeholder='Hasło'/>
+            <label htmlFor='password'/>
+              <input 
+              type="password" 
+              className='login-form-password' 
+              placeholder='Hasło'
+              required
+              onChange={(e)=>setPassword(e.target.value)}
+              value={password}
+              />
            <br />
            <button type="submit" className='login-form-login-button'>Zaloguj</button>
            <button type='submit' className='login-form-google-login-button'>Google</button>
            <br />
            <span>Nie masz konta?</span>
-           <a href="/Register">Rejestruj</a>
+           <Link to="/Register">Rejestruj</Link>
 
 
 
