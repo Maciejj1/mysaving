@@ -5,6 +5,10 @@ import LoginForm from './components/LoginForm/LoginForm';
 import RegisterForm from './components/RegisterForm/RegisterForm';
 import {BrowserRouter as Router, Route , Routes , } from 'react-router-dom'
 import Home from './components/Home/Home';
+import Expenses from './components/Expenses/Expenses'
+import Settings from './components/SettingsPage/Settings'
+import Notifications from './components/Notifications/Notifications';
+import { UsersDataContextProvider } from './components/NameProvider/NameProvider';
 class App extends Component {
 
 
@@ -21,13 +25,18 @@ class App extends Component {
   render(){
   return (
     <div className="App">
+      <UsersDataContextProvider>
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path="/login" element={<LoginForm />}/>
           <Route path="/register" element={<RegisterForm/>} />
+          <Route path="/notifications" element={<Notifications/>} />
+          <Route path="/setting" element={<Settings/>} />
+          <Route path="/expenses" element={<Expenses/>} />
         </Routes>
      </Router>
+     </UsersDataContextProvider>
     </div>
   );
 }

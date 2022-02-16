@@ -2,6 +2,9 @@ import React,{useState} from 'react'
 import {auth} from '../FirebaseConfig/Config'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import { provider } from '../FirebaseConfig/Config'
+import { GoogleAuth } from '../FirebaseConfig/Config'
+import firebase from 'firebase/compat/app'
  const LoginForm = () => {
        const history = useNavigate();
        const[email , setEmail] = useState('');
@@ -21,9 +24,7 @@ import { useNavigate } from 'react-router-dom'
            history('/');
          }).catch(error=>setError(error.message));
        }
-
-
-
+       
 
 
 
@@ -64,6 +65,17 @@ import { useNavigate } from 'react-router-dom'
            <button type="submit" className='login-form-login-button'>Zaloguj</button>
            <button type='submit' className='login-form-google-login-button'>Google</button>
            <br />
+           <button
+       onClick={()=>{
+
+      
+   const GoogleAuth = 
+   new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(GoogleAuth)
+
+ }}>Zaloguj się Przez Google</button>
+ <br/>
            <span>Nie masz konta?</span>
            <Link to="/Register">Rejestruj</Link>
 

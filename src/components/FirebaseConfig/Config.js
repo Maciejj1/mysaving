@@ -3,6 +3,8 @@ import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 import 'firebase/compat/storage'
 
+import {GoogleAuthProvider} from 'firebase/auth'
+
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_API_KEY}`,
   authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
@@ -15,7 +17,8 @@ const firebaseConfig = {
 console.log(process.env.REACT_APP_API_KEY)
 firebase.initializeApp(firebaseConfig);
 
+const GoogleAuth = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
 const db = firebase.firestore();
 const storage = firebase.storage();
-export { auth , db ,storage , }
+export { auth , db , storage , GoogleAuth }
