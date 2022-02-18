@@ -8,7 +8,6 @@ import Home from './components/Home/Home';
 import Expenses from './components/Expenses/Expenses'
 import Settings from './components/SettingsPage/Settings'
 import Notifications from './components/Notifications/Notifications';
-import { UsersDataContextProvider } from './components/NameProvider/NameProvider';
 import { AuthProvider } from './components/AuthContext/AuthContext';
 class App extends Component {
 
@@ -26,6 +25,7 @@ class App extends Component {
   render(){
   return (
     <div className="App">
+      
       <AuthProvider>
       <Router>
         <Routes>

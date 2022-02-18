@@ -1,19 +1,21 @@
 import React,{useState} from 'react'
 import {auth , db} from '../FirebaseConfig/Config'
 import {Link} from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 const RegisterForm = (props) => {
     const[name , setName] = useState('');
     const[email , setEmail] = useState('');
     const[password , setPassword] = useState('');
     const[image , setImage] = useState('');
+    const[amout, setAmout] = useState('');
     const[error, setError] = useState('');
-
+    const history = useNavigate();
     const Register = (e) =>{
      e.preventDefault();
      auth.createUserWithEmailAndPassword(email, password).then((cred)=>{
        db.collection('UsersData').doc(cred.user.uid).set({
          Name: name,
+         Amout: amout,
          Email: email,
          Password: password,
          Image: image,
@@ -22,8 +24,9 @@ const RegisterForm = (props) => {
          setEmail('');
          setPassword('');
          setImage('');
+         setAmout('');
          setError('');
-         props.history.push('/login');
+         history('/login');
        }).catch(err => setError(err.message));
      }).catch(err => setError)
      console.log('its works');
@@ -65,6 +68,14 @@ const RegisterForm = (props) => {
                 placeholder='Hasło' 
                 onChange={(e)=>setPassword(e.target.value)}
                  value={password}
+                />
+                <label htmlFor='amout'/>
+                <input 
+                type="number" 
+                className='register-form-amout' 
+                placeholder='Zarobki' 
+                onChange={(e)=>setAmout(e.target.value)}
+                 value={amout}
                 />
                     <br />
             <label htmlFor='image' />

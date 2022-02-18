@@ -13,21 +13,33 @@ const Settings = () => {
      })
    }
   return (
-    <div>
-      <Nav/>
-      <h2>Dodaj Saldo</h2>
-        <input type="text"/>.PLN
+    <div className='settings-container'>
+      <div className='settigns-nav'>
+        <Nav/>
+      </div>
+      <div className='settings-title'>
+        <h1>Ustawienia</h1>
+      </div>
+      <hr/>
+      <div className='settigns-account'>
+        <img src="https://www.clipartmax.com/png/middle/49-499626_pizza-free-vector-icon-designed-by-freepik-icones-de-destaques-do-instagram.png"></img>
+        <h3>Maciej</h3>
+      </div>
+      <div className='settigns-add-balance'>
+        
+      </div>
+      <div className='seetign-change-email'>
+      <a href="">Zmień Email</a>
+      </div>
+      <div className='seetign-change-password'>
+      <a href="">Zmień Hasło</a>
+      </div>
+      <div className='seetign-change-picture'>
+      <a href="">Zmień Zdjęcie</a>
+      </div>
+        
         <br />
         <button onClick={handleLogOut}>Wyloguj</button>
-        <br />
-        <Link to="/">Panel Głowny</Link>
-        <br/>
-        <Link to="/notifications">Powiadomienia</Link>
-        <br/>
-        <Link to="/setting">Ustawienia</Link>
-        <br/>
-        <Link to="/expenses">Wydatki</Link>
-        
         <br />
     </div>
   )
