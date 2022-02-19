@@ -1,24 +1,34 @@
 import React from 'react';
 
 import Nav from '../NavBar/Nav';
-import { GlobalProvider } from '../context/GlobalState';
+import { TransactionProvider } from '../context/GlobalState';
 import {Balance} from '../transaction/Balance'
 import {AddTransaction} from '../transaction/AddTransaction'
-import {TransactionList} from '../transaction/TransactionList'
+import {TransactionHistory} from '../transaction/TransactionList'
 import {IncomeExpenses} from '../transaction/IncomeExpenses'
+import './Home.scss'
 
 function Home() {
   return (
-    <GlobalProvider>
+    <TransactionProvider>
         
-      <div className="container">
+      <div className="home-container">
+        <div className='home-base'>
         <Nav />
-        <Balance />
+        <di className="home-balance-inc-exp">
+          <Balance />
         <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
+        </di>
+        
+        <div className='home-transaction-history'>
+          <TransactionHistory />
+        </div>
+        <div className='home-add-transaction'>
+          <AddTransaction />
+        </div>
+        </div>
       </div>
-    </GlobalProvider>
+    </TransactionProvider>
   );
 }
 

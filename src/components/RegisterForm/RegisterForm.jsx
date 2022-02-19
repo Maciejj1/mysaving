@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import {auth , db} from '../FirebaseConfig/Config'
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import logo from '../../assets/pictures/logo.png'
+import './Register.scss'
 const RegisterForm = (props) => {
     const[name , setName] = useState('');
     const[email , setEmail] = useState('');
@@ -40,8 +42,12 @@ const RegisterForm = (props) => {
 
   return (
     <div className='register-form-conatiner'>
-        <h2>Rejestracja</h2>
+        <div className='register-form-base'>
         <form autoComplete='off' className='register-form-group' onSubmit={Register}>
+        <div className='registerform-title'>
+            <img src={logo} className="registerform-logo"/>
+            <h2>MySaving</h2>
+          </div>
            <label htmlFor='name'/>
                 <input
                  type="text"
@@ -69,32 +75,24 @@ const RegisterForm = (props) => {
                 onChange={(e)=>setPassword(e.target.value)}
                  value={password}
                 />
-                <label htmlFor='amout'/>
-                <input 
-                type="number" 
-                className='register-form-amout' 
-                placeholder='Zarobki' 
-                onChange={(e)=>setAmout(e.target.value)}
-                 value={amout}
-                />
-                    <br />
-            <label htmlFor='image' />
-                <input 
-                type="file" 
-                className='register-form-image' />
+                
+                
                 <br/>
                 <button type="submit" className='register-form-register-button'>Rejestruj</button>
-                <button type='submit' className='register-form-google-reegister-button'>Google</button>
+                
                     <br />
-           <span>Masz już konto?</span>
-           <a href="/login">Zaloguj</a>
+                    <div className='register-form-link-to-login'>
+           <span className='register-form-link-to-login'>Masz już konto?</span>
+           <br/>
+           <Link to="/login" className='login-form-register'>Zaloguj</Link>
 
-
+                    </div>
 
 
 
 
         </form>
+        </div>
     </div>
   )
 }

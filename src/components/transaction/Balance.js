@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { TransactionContext } from '../context/GlobalState';
 
 //Money formatter function
 function moneyFormatter(num) {
@@ -18,7 +18,7 @@ function moneyFormatter(num) {
 }
 
 export const Balance = () => {
-  const { transactions } = useContext(GlobalContext);
+  const { transactions } = useContext(TransactionContext);
 
   const amounts = transactions.map(transaction => transaction.amount);
 

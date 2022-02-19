@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext);
+
+.login-form-container {
+  width: 100%;
+  height: auto;
+}
+.loginform-logo {
+  float: left;
+  margin-right: 45px;
+  margin-top: 10px;
+}
+.loginform-title h2 {
+  font-size: 48px;
+  margin-top: 30px;
+  float: left;
+  background-image: linear-gradient(#00538a 60%, #a8dedd);
+  background-clip: text;
+  color: transparent;
+}
+.login-form-group {
+  display: inline-block;
+
+  height: 420px;
+}
+
+.login-form-email {
+  border: none;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+
+  outline-width: 0;
+  background-color: #7fc2d8;
+}
+.login-form-password {
+  margin-top: 20px;
+  border: none;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+
+  color: white;
+  outline-width: 0;
+  background-color: #7fc2d8;
+}
+.login-form-login-button {
+  margin-top: 20px;
+  border: none;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+
+  outline-width: 0;
+
+  background-color: #00538a;
+}
+.login-form-login-google {
+  margin-top: 20px;
+  border: none;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 40px;
+  outline: none;
+  color: white;
+  outline-width: 0;
+  background-color: #00538a;
+}
+::placeholder {
+  color: white;
+  margin-left: 200px;
+}
+.loginform-google-icon {
+  width: 14%;
+  border-radius: 20px 0 0 20px;
+  margin-top: -1px;
+  float: left;
+  margin-left: -6px;
+  background-color: white;
+}
+p {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.login-form-login-button:hover {
+  background-color: #4f86ec;
+  cursor: pointer;
+}
+.login-form-login-google:hover {
+  background-color: #4f86ec;
+
+  cursor: pointer;
+}
+.login-form-register {
+  font-size: 30px;
+  text-decoration: none;
+  color: #00538a;
+}
+.login-form-link-to-register {
+  margin-top: 7px;
+}
+.login-form-base {
+  background-color: #eeeeee;
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  left: 38%;
+  transform: translateY(-50%);
+  height: 350px;
+  border-radius: 6%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
