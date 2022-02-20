@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { TransactionContext } from '../context/GlobalState';
-
-
+import { TransactionContext } from '../../context/GlobalState';
+import './IncExp.scss'
+import poor from '../../../assets/pictures/poor.png'
+import piggy from '../../../assets/pictures/piggy-bank.png'
 function moneyFormatter(num) {
   let p = num.toFixed(2).split('.');
   return (
@@ -33,13 +34,13 @@ export const IncomeExpenses = () => {
 
   return (
     <div className="inc-exp-container">
-        <div>
-          <h4>Przychody</h4>
-  <h4 className="money plus">{moneyFormatter(income)}</h4>
+        <div className='inc'>
+          <p>Przychody</p>
+  <h4 className="money-plus"><img src={piggy} className="piggy"/>{moneyFormatter(income)}</h4>
         </div>
-        <div>
-          <h4>Wydatki</h4>
-  <h4 className="money minus">{moneyFormatter(expense)}</h4>
+        <div className='exp'>
+          <p>Wydatki</p>
+  <h4 className="money-minus"><img src={poor} className="poor"/>{moneyFormatter(expense)}</h4>
         </div>
       </div>
   )

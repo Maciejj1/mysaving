@@ -4,14 +4,12 @@
   height: auto;
 }
 .nav-base {
-  height: 92.7%;
+  height: 920px;
   width: 250px;
-  position: fixed;
+  position: absolute;
   border-radius: 45px 0 0 45px;
-  z-index: 1;
 
-  background-color: #baf7ff;
-  overflow-x: hidden;
+  background-color: #cee5ff;
   padding-top: 20px;
 }
 .nav-nav-logo {
@@ -24,6 +22,7 @@
 .nav-title h1 {
   margin-left: 20px;
   float: left;
+  font-size: 35px;
   background-image: linear-gradient(#00538a 60%, #a8dedd);
   background-clip: text;
   color: transparent;
@@ -34,12 +33,13 @@
   font-size: 25px;
   color: #818181;
   margin-top: 50px;
-  margin-left: -20px;
+  margin-left: 0px;
   display: block;
 }
 .nav-links a {
   text-decoration: none;
   margin-bottom: -10px;
+  color: #0c5d90;
 }
 .nav-links a:active {
   text-decoration: none;
@@ -47,4 +47,20 @@
   color: #00d1ff;
 }
 .nav-links a:hover {
+}
+.home-logo {
+  width: 20%;
+  filter: invert(45%) sepia(71%) saturate(1355%) hue-rotate(160deg)
+    brightness(93%) contrast(101%);
+  float: left;
+  margin-top: -10px;
+  margin-left: 20px;
+}
+.settings-logo {
+  width: 20%;
+  filter: invert(45%) sepia(71%) saturate(1355%) hue-rotate(160deg)
+    brightness(93%) contrast(101%);
+  float: left;
+  margin-top: -10px;
+  margin-left: 20px;
 }

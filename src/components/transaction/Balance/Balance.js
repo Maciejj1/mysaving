@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { TransactionContext } from '../context/GlobalState';
-
+import { TransactionContext } from '../../context/GlobalState';
+import './Balance.scss'
+import coin from '../../../assets/pictures/coin.png'
 //Money formatter function
-function moneyFormatter(num) {
+function moneyFormatterr(num) {
   let p = num.toFixed(2).split('.');
   return (
      (p[0].split('')[0]=== '-' ? '-' : '') +
@@ -25,9 +26,12 @@ export const Balance = () => {
   const total = amounts.reduce((acc, item) => (acc += item), 0);
 
   return (
-    <>
-      <h4>Saldo</h4>
-    <h4>{moneyFormatter(total)}</h4>
-    </>
+    <div className='balance-container'>
+      <div className='balance'>
+      <p>Saldo</p>
+    <h4 className='balance-money'><img src={coin} className="coin"/>{moneyFormatterr(total)}</h4>
+    </div>
+    
+    </div>
   )
 }

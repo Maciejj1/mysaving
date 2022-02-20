@@ -2,10 +2,10 @@ import React from 'react';
 
 import Nav from '../NavBar/Nav';
 import { TransactionProvider } from '../context/GlobalState';
-import {Balance} from '../transaction/Balance'
-import {AddTransaction} from '../transaction/AddTransaction'
-import {TransactionHistory} from '../transaction/TransactionList'
-import {IncomeExpenses} from '../transaction/IncomeExpenses'
+import {Balance} from '../transaction/Balance/Balance'
+import {AddTransaction} from '../transaction/AddTransaction/AddTransaction'
+import {TransactionHistory} from '../transaction/TransactionList/TransactionList'
+import {IncomeExpenses} from '../transaction/IncomeExpenses/IncomeExpenses'
 import './Home.scss'
 
 function Home() {
@@ -15,12 +15,16 @@ function Home() {
       <div className="home-container">
         <div className='home-base'>
         <Nav />
-        <di className="home-balance-inc-exp">
+        <h2>Twoje Saldo</h2>
+        <div className="home-balance">
           <Balance />
-        <IncomeExpenses />
-        </di>
-        
+          <IncomeExpenses />
+          </div>
+
+        <hr/>
+        <h2>Historia</h2>
         <div className='home-transaction-history'>
+        
           <TransactionHistory />
         </div>
         <div className='home-add-transaction'>

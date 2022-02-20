@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import {  TransactionContext } from '../context/GlobalState';
-
+import {  TransactionContext } from '../../context/GlobalState';
+import './TransactionList.scss'
 //Money formatter function
 function moneyFormatter(num) {
   let p = num.toFixed(2).split('.');
@@ -23,10 +23,10 @@ export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? '-' : '+';
 
   return (
-    <>
+    <div className='transaction-container'>
   <button onClick={() => deleteTransaction(transaction.id)} className="transaction-delete-button">x</button>
-    <li>{transaction.amount < 0 }
+    <div>{transaction.amount < 0 }
       {transaction.text} <span>{sign}{moneyFormatter(transaction.amount)}</span>
-    </li></>
+    </div></div>
   )
 }

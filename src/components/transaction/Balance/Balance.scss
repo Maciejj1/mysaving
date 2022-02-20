@@ -1,0 +1,19 @@
+.balance-container {
+  display: flex;
+  width: 100%;
+  height: 0;
+}
+.balance-money {
+  margin-top: -2px;
+  color: #42a6f3;
+}
+.balance {
+  font-size: 40px;
+  margin-top: 40px;
+}
+.coin {
+  width: 10%;
+  margin-right: 30px;
+  filter: invert(56%) sepia(91%) saturate(1586%) hue-rotate(180deg)
+    brightness(99%) contrast(92%);
+}

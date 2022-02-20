@@ -1,15 +1,48 @@
-.home-container {
-  width: 100%;
-  height: auto;
+@media (min-width: 1920px) {
+  .home-container {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .home-base {
   width: 100%;
   background-color: white;
   border-radius: 45px;
-  display: block;
+  display: inline-block;
   justify-content: center;
-  height: 830px;
+  height: 940px;
+  text-align: center;
   align-items: center;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+.home-base h2 {
+  float: left;
+  margin-left: 300px;
+  font-size: 35px;
+}
+.home-balance {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-left: 300px;
+  margin-top: 30px;
+  align-items: center;
+}
+hr {
+  border: 0px solid black;
+  background: linear-gradient(-215deg, #ffffff, #3c78e7, #4ed0ff, #2335d5);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 1%;
+}
+.home-transaction-history {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+.home-add-transaction {
+  display: block;
+  margin-top: 200px;
 }

@@ -1,0 +1,40 @@
+.inc-exp-container {
+  display: flex;
+  width: 100%;
+  height: 10;
+}
+
+.money-plus {
+  margin-left: 12px;
+  margin-top: -2px;
+  color: rgb(66, 255, 66);
+}
+.money-minus {
+  margin-left: 5px;
+  margin-top: -2px;
+  color: red;
+}
+.inc {
+  font-size: 40px;
+  margin-top: 40px;
+  margin-left: 350px;
+  margin-right: 50px;
+}
+.exp {
+  font-size: 40px;
+  margin-top: 40px;
+  margin-left: 70px;
+  float: right;
+}
+.piggy {
+  width: 15%;
+  margin-right: 30px;
+  filter: invert(94%) sepia(69%) saturate(5364%) hue-rotate(49deg)
+    brightness(98%) contrast(106%);
+}
+.poor {
+  width: 12%;
+  margin-right: 30px;
+  filter: invert(23%) sepia(64%) saturate(4608%) hue-rotate(4deg)
+    brightness(103%) contrast(105%);
+}
