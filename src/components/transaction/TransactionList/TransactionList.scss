@@ -1,14 +1,75 @@
 .transaction-history-container {
-  width: 50%;
-  height: auto;
+  width: 100%;
+  height: 220px;
+  align-items: justify;
+  overflow-y: scroll;
+  transform: translateY(-20%);
 }
-.transaction-history {
-  background-color: aqua;
+.transaction-container {
+  background-color: #00a3ff;
+  width: 300px;
+  top: 10%;
+  left: 40%;
+  display: inline-block;
+  transform: translateY(150%);
+  height: 50px;
+  margin-top: 0px;
+
+  border-radius: 45px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
 }
 .transaction-delete-button {
-  float: right;
-  background-color: aquamarine;
+  background-color: #00c2ff;
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  left: 105%;
+  transform: translateY(-50%);
+  height: 50px;
+  border-radius: 45px;
+  display: block;
   outline: 0;
+  border: none;
+  font-size: 20px;
+  box-shadow: 5px 3px 6px rgb(163, 163, 163);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
 }
-.transaction-history li {
+.transaction-container h4 {
+  width: 300px;
+  position: absolute;
+  right: 25%;
+
+  transform: translateY(-50%);
+  border-radius: 45px;
+  outline: 0;
+  border: none;
+  font-size: 20px;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.transaction-money {
+  background-color: #00c2ff;
+  position: absolute;
+  width: 140px;
+  top: 50%;
+  left: 75%;
+
+  transform: translateY(-50%);
+  height: 50px;
+  border-radius: 45px;
+  display: block;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.transaction-money h5 {
+  margin-top: 13px;
+
+  font-size: 20px;
 }

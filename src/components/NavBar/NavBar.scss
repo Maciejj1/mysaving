@@ -4,24 +4,26 @@
   height: auto;
 }
 .nav-base {
-  height: 920px;
+  height: 100px;
   width: 250px;
-  position: absolute;
-  border-radius: 45px 0 0 45px;
+  margin-right: 40px;
+  float: right;
 
-  background-color: #cee5ff;
+  border-radius: 45px 0 0 45px;
   padding-top: 20px;
 }
 .nav-nav-logo {
   float: left;
   margin-left: 10px;
+  position: relative;
 }
 .nav-title {
   float: left;
 }
 .nav-title h1 {
   margin-left: 20px;
-  float: left;
+  position: relative;
+
   font-size: 35px;
   background-image: linear-gradient(#00538a 60%, #a8dedd);
   background-clip: text;
@@ -29,11 +31,12 @@
 }
 .nav-links {
   float: left;
+  position: relative;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  margin-top: 50px;
-  margin-left: 0px;
+  margin-top: 20px;
+  margin-left: 50px;
   display: block;
 }
 .nav-links a {
@@ -55,6 +58,7 @@
   float: left;
   margin-top: -10px;
   margin-left: 20px;
+  margin-right: 5px;
 }
 .settings-logo {
   width: 20%;
@@ -63,4 +67,5 @@
   float: left;
   margin-top: -10px;
   margin-left: 20px;
+  margin-right: -20px;
 }

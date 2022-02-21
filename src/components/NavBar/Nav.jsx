@@ -19,7 +19,7 @@ const Nav = () => {
          <h1>MySaving</h1>
        </div>
          <div className='nav-links'>
-        <Link to="/" className='dashboard-link'><img src={home} className="home-logo"/>Panel Głowny</Link>
+        <Link to="/" className='dashboard-link'><img src={home} className="home-logo"/> Panel Głowny</Link>
         <br/>
         <br/>
         <Link to="/setting" className='settings-link'><img src={settings} className="settings-logo"/>Ustawienia</Link>

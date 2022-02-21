@@ -1,0 +1,72 @@
+.add-transaction-container {
+  width: 100%;
+  height: auto;
+}
+.add-transaction-base {
+  position: absolute;
+  width: 400px;
+  top: 73%;
+  left: 40%;
+  border-radius: 6%;
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.add-transaction-container h3 {
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 46%;
+  font-size: 30px;
+}
+.add-transaction-form {
+  display: inline-block;
+  height: 220px;
+}
+.add-transaction-add-text {
+  border: none;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 45px;
+  color: white;
+  outline: none;
+  background-color: #00a3ff;
+  outline-width: 0;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+.add-transaction-add-amount {
+  border: none;
+  width: 300px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 45px;
+  color: white;
+  outline: none;
+  background-color: #00a3ff;
+  outline-width: 0;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+.add-transaction-amount p {
+  margin-left: 20px;
+}
+.add-transaction-add-button {
+  margin-top: 10px;
+  border: none;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+
+  outline-width: 0;
+  margin-left: 20px;
+  background-color: #00c2ff;
+}

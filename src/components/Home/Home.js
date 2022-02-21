@@ -6,6 +6,7 @@ import {Balance} from '../transaction/Balance/Balance'
 import {AddTransaction} from '../transaction/AddTransaction/AddTransaction'
 import {TransactionHistory} from '../transaction/TransactionList/TransactionList'
 import {IncomeExpenses} from '../transaction/IncomeExpenses/IncomeExpenses'
+import user from '../../assets/pictures/man.png'
 import './Home.scss'
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
         <Nav />
         <h2>Twoje Saldo</h2>
         <div className="home-balance">
+          
           <Balance />
           <IncomeExpenses />
           </div>

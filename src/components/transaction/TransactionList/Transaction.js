@@ -13,7 +13,7 @@ function moneyFormatter(num) {
         return num === '-' ? acc : num + (i && !(i % 3) ? ',' : '') + acc;
       }, '') +
     '.' +
-    p[1]+'PLN ' 
+    p[1]+' PLN ' 
   );
 }
 
@@ -23,10 +23,15 @@ export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? '-' : '+';
 
   return (
-    <div className='transaction-container'>
-  <button onClick={() => deleteTransaction(transaction.id)} className="transaction-delete-button">x</button>
-    <div>{transaction.amount < 0 }
-      {transaction.text} <span>{sign}{moneyFormatter(transaction.amount)}</span>
-    </div></div>
+    <div className='transaction-div-container' >
+    <ul className='transaction-container'>
+
+    <div className='transaction-scroll'>{transaction.amount < 0 }
+      <h4>{transaction.text}</h4> <span className='transaction-money'><h5>{sign}{moneyFormatter(transaction.amount)}</h5><button onClick={() => deleteTransaction(transaction.id)} className="transaction-delete-button">x</button></span> 
+     
+    </div> 
+    </ul>
+  
+    </div>
   )
 }
