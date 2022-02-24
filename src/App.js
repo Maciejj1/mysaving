@@ -10,6 +10,27 @@ import Settings from "./components/SettingsPage/Settings";
 import Notifications from "./components/Notifications/Notifications";
 import { AuthProvider } from "./components/AuthContext/AuthContext";
 class App extends Component {
+  state = {
+    user: null,
+  };
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        db.collection("UsersData")
+          .doc(user.uid)
+          .get()
+          .then((snapshot) => {
+            this.setState({
+              user: snapshot.data().Name,
+            });
+          });
+      } else {
+        this.setState({
+          user: null,
+        });
+      }
+    });
+  }
   render() {
     return (
       <div className="App">
