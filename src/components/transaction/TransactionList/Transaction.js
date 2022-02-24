@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { TransactionContext } from "../../context/GlobalState";
 import "./TransactionList.scss";
 //Money formatter function

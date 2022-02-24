@@ -1,5 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { TransactionContext } from "../../context/GlobalState";
+
 import "./AddTransaction.scss";
 export const AddTransaction = () => {
   const [text, setText] = useState("");
@@ -18,7 +19,8 @@ export const AddTransaction = () => {
 
     addTransaction(newTransaction);
   };
-
+  localStorage.setItem(text, amount);
+  localStorage.getItem(text, amount);
   return (
     <div className="add-transaction-container">
       <h3>Dodaj transakcje</h3>
