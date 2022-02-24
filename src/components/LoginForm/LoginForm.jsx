@@ -33,7 +33,7 @@ const LoginForm = () => {
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     auth
-      .signInWithPopup(googleProvider)
+      .signInWithRedirect(googleProvider)
       .then(() => {
         window.location.assign("/");
       })
