@@ -50,6 +50,18 @@
   color: #00d1ff;
 }
 .nav-links a:hover {
+  opacity: 0.7;
+  transform: scale(1.05, 1.07);
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  -webkit-transform: scale(1.05, 1.07);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1.05, 1.07);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+  position: relative;
+  z-index: 99;
 }
 .home-logo {
   width: 20%;

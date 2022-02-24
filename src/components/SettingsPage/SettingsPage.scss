@@ -1,0 +1,129 @@
+@media (min-width: 1920px) {
+  .settings-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.settings-base {
+  width: 100%;
+  background-color: white;
+  border-radius: 45px;
+  display: block;
+  position: relative;
+  justify-content: center;
+  height: 910px;
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.settings-base h2 {
+  float: left;
+  margin-left: 139px;
+  font-size: 35px;
+}
+.settings-base hr {
+  border: 0px solid black;
+  background: linear-gradient(-215deg, #ffffff, #3c78e7, #4ed0ff, #2335d5);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 1%;
+  position: relative;
+  right: 15.3%;
+  top: 10%;
+}
+.links {
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 30%;
+
+  justify-content: center;
+}
+.logout-button {
+  margin-top: 470px;
+  border: none;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  outline-width: 0;
+
+  background-color: #00538a;
+}
+
+.links button {
+  border: none;
+  width: 300px;
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  outline-width: 0;
+
+  background-color: #00538a;
+}
+.links button:hover {
+  border: none;
+  width: 300px;
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  outline-width: 0;
+  opacity: 0.7;
+  transform: scale(1.05, 1.07);
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  -webkit-transform: scale(1.05, 1.07);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1.05, 1.07);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+  position: relative;
+  z-index: 99;
+  background-color: #41b3ff;
+}
+.logout-button:hover {
+  margin-top: 470px;
+  border: none;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  outline-width: 0;
+  opacity: 0.7;
+  transform: scale(1.05, 1.07);
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  -webkit-transform: scale(1.05, 1.07);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1.05, 1.07);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+  position: relative;
+  z-index: 99;
+  background-color: #41b3ff;
+}

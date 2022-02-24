@@ -8,11 +8,18 @@ import {TransactionHistory} from '../transaction/TransactionList/TransactionList
 import {IncomeExpenses} from '../transaction/IncomeExpenses/IncomeExpenses'
 import user from '../../assets/pictures/man.png'
 import './Home.scss'
-
+import { auth } from '../FirebaseConfig/Config';
+import { useNavigate } from 'react-router-dom';
+import LoginForm from '../LoginForm/LoginForm';
 function Home() {
+const history = useNavigate();
+
   return (
     <TransactionProvider>
-        
+      
+      
+      
+      {user &&
       <div className="home-container">
         <div className='home-base'>
         <Nav />
@@ -33,7 +40,7 @@ function Home() {
           <AddTransaction />
         </div>
         </div>
-      </div>
+      </div> }
     </TransactionProvider>
   );
 }

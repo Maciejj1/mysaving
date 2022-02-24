@@ -68,5 +68,33 @@
 
   outline-width: 0;
   margin-left: 20px;
-  background-color: #00c2ff;
+  background-color: #00538a;
+}
+.add-transaction-add-button:hover {
+  margin-top: 10px;
+  border: none;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  color: white;
+
+  outline-width: 0;
+  margin-left: 20px;
+
+  transform: scale(1.05, 1.07);
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  -webkit-transform: scale(1.05, 1.07);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1.05, 1.07);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+  position: relative;
+  z-index: 99;
+  background-color: #2c5dff;
+  cursor: pointer;
 }

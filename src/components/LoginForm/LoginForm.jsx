@@ -9,7 +9,7 @@ import firebase from 'firebase/compat/app'
 import './Login.scss'
 import google from '../../assets/pictures/google.png'
  const LoginForm = () => {
-       const history = useNavigate();
+       const history = useNavigate(); 
        const[email , setEmail] = useState('');
        const[password , setPassword] = useState('');
        const[successMsg , setSuccessMsg] = useState('');
