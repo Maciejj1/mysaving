@@ -11,6 +11,7 @@ import "./Home.scss";
 import { auth } from "../FirebaseConfig/Config";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../LoginForm/LoginForm";
+import { Link } from "react-router-dom";
 function Home() {
   const history = useNavigate();
 
