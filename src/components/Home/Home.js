@@ -16,6 +16,7 @@ function Home() {
 
   return (
     <TransactionProvider>
+      {!user && <Link to="/login">Zaloguj się</Link>}
       {user && (
         <div className="home-container">
           <div className="home-base">
