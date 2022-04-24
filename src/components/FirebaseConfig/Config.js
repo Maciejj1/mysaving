@@ -1,9 +1,7 @@
 import firebase from "firebase/compat/app";
+import "firebase/compat/database";
 import "firebase/compat/auth";
-import "firebase/compat/firestore";
 import "firebase/compat/storage";
-
-import { GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_API_KEY}`,
@@ -13,12 +11,14 @@ const firebaseConfig = {
   messagingSenderId: `${process.env.REACT_APP_MESSAGING_SENDER_ID}`,
   appId: `${process.env.REACT_APP_APP_ID}`,
   measurementId: `${process.env.REACT_APP_MEASURMENT_ID}`,
+  databaseUrl:
+    "https://mysaving-b9bfe-default-rtdb.europe-west1.firebasedatabase.app",
 };
 console.log(process.env.REACT_APP_API_KEY);
 firebase.initializeApp(firebaseConfig);
 
 const GoogleAuth = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
-const db = firebase.firestore();
 const storage = firebase.storage();
-export { auth, db, storage, GoogleAuth };
+const database = firebase.database();
+export { firebase, auth, storage, GoogleAuth, database };

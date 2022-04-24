@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Nav from "../NavBar/Nav";
 import { TransactionProvider } from "../context/GlobalState";
@@ -12,14 +12,30 @@ import { auth } from "../FirebaseConfig/Config";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../LoginForm/LoginForm";
 import { Link } from "react-router-dom";
-function Home() {
+import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router";
+import Popup from "../Popup/Popup";
+import { useEffect } from "react";
+import { onAuthStateChanged } from "@firebase/auth";
+function Home({ user }) {
   const history = useNavigate();
+  useEffect(() => {
+    // forcing user to signup
+    auth.onAuthStateChanged((user) => {
+      if (!user) {
+        history("/login");
+      }
+    });
+  });
+  const close = () => {
+    setIsLoginSuccess(false);
+  };
 
+  const [isLoginSuccess, setIsLoginSuccess] = useState(false);
   return (
-    <TransactionProvider>
-      {!user && <Link to="/login">Zaloguj się</Link>}
-      {user && (
-        <div className="home-container">
+    <div className="home-container" user={user}>
+      <TransactionProvider>
+        <React.StrictMode>
           <div className="home-base">
             <Nav />
             <h2>Twoje Saldo</h2>
@@ -37,9 +53,9 @@ function Home() {
               <AddTransaction />
             </div>
           </div>
-        </div>
-      )}
-    </TransactionProvider>
+        </React.StrictMode>
+      </TransactionProvider>
+    </div>
   );
 }
 

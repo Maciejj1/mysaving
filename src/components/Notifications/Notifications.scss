@@ -1,0 +1,32 @@
+@media (min-width: 1920px) {
+  .notifications-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.notifications-base {
+  width: 100%;
+  background-color: white;
+  border-radius: 45px;
+  display: block;
+  position: relative;
+  justify-content: center;
+  height: 910px;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.notifications-base h2 {
+  float: left;
+  margin-left: 100px;
+  font-size: 35px;
+}
+.notifications-base hr {
+  border: 0px solid black;
+  background: linear-gradient(-215deg, #ffffff, #3c78e7, #4ed0ff, #2335d5);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 1%;
+}

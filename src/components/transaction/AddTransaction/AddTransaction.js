@@ -1,12 +1,21 @@
 import React, { useState, useContext, useEffect } from "react";
 import { TransactionContext } from "../../context/GlobalState";
-
+import { database } from "../../FirebaseConfig/Config";
+import { firebase } from "../../FirebaseConfig/Config";
 import "./AddTransaction.scss";
 export const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
   const { addTransaction } = useContext(TransactionContext);
+  const createSaving = () => {
+    const TransactionRef = firebase.database().ref("MySaving");
+    const MySaving = {
+      text,
+      complete: false,
+    };
+    TransactionRef.push(MySaving);
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -19,8 +28,6 @@ export const AddTransaction = () => {
 
     addTransaction(newTransaction);
   };
-  localStorage.setItem(text, amount);
-  localStorage.getItem(text, amount);
   return (
     <div className="add-transaction-container">
       <h3>Dodaj transakcje</h3>
@@ -51,7 +58,9 @@ export const AddTransaction = () => {
               className="add-transaction-add-amount"
             />
           </div>
-          <button className="add-transaction-add-button">Zatwierdź</button>
+          <button className="add-transaction-add-button" onClick={createSaving}>
+            Zatwierdź
+          </button>
         </form>
       </div>
     </div>

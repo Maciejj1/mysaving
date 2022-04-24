@@ -28,6 +28,18 @@ const Nav = () => {
             Ustawienia
           </Link>
           <br />
+          <br />
+          <Link to="/notifications" className="settings-link">
+            <img src={settings} className="settings-logo" />
+            Powiadomienia
+          </Link>
+          <br />
+          <br />
+          <Link to="/setting" className="settings-link">
+            <img src={settings} className="settings-logo" />
+            Wydatki
+          </Link>
+          <br />
         </div>
       </div>
     </div>

@@ -1,0 +1,16 @@
+.popup {
+  position: fixed;
+  inset: 0;
+  width: 20%;
+  z-index: 1000;
+}
+.popup-base {
+  position: fixed;
+  margin: auto;
+  display: inline;
+  padding: 0;
+  inset: 0;
+  background-color: bisque;
+  height: 50%;
+  width: 50%;
+}
