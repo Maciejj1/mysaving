@@ -13,15 +13,7 @@ import { AuthProvider } from "./components/AuthContext/AuthContext";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <AuthProvider>
-          <Router>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<LoginForm />} />
-              <Route path="/register" element={<RegisterForm />} />
-              <Route path="/setting" element={<Settings />} />
-              <Route path="/notifications" element={<Notifications />} />
+
             </Routes>
           </Router>
         </AuthProvider>
