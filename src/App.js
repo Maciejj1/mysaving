@@ -19,7 +19,6 @@ class App extends Component {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<LoginForm />} />
-              <Route path="/register" element={<RegisterForm />} />
               <Route path="/setting" element={<Settings />} />
               <Route path="/notifications" element={<Notifications />} />
             </Routes>
